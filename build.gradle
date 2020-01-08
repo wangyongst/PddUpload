@@ -1,0 +1,53 @@
+group = 'com.spring.boot'
+version = '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE'
+        classpath('de.dynamicfiles.projects.gradle.plugins:javafx-gradle-plugin:8.8.2')
+    }
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'javafx-gradle-plugin'
+
+dependencyManagement {
+    imports {
+        mavenBom 'io.spring.platform:platform-bom:Cairo-RELEASE'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = "utf-8"
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.apache.httpcomponents:httpclient'    
+    compile 'org.apache.commons:commons-lang3'
+    compile 'org.apache.tomcat:tomcat-jdbc'
+    compile 'mysql:mysql-connector-java'
+    compile 'org.springframework.data:spring-data-jpa'
+    compile 'org.hibernate:hibernate-entitymanager'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    compile group: 'org.apache.poi', name: 'poi', version: '3.15'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+
+}
