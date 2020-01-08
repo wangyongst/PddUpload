@@ -49,5 +49,13 @@ dependencies {
     compile group: 'org.apache.poi', name: 'poi', version: '3.15'
     // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+}
 
+
+jfx {
+    appName = "Pdd Upload"
+    // 启动类
+    mainClass = 'com.quanmin.javafx.Main'
+    // 公司名称
+    vendor = 'Quan Min'
 }
