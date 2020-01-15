@@ -21,14 +21,12 @@
       <Pane prefHeight="513.0" prefWidth="563.0">
          <children>
             <Button layoutX="42.0" layoutY="85.0" mnemonicParsing="false" onAction="#pddLogin" prefHeight="23.0" prefWidth="161.0" text="点击登录拼多多" />
-            <Button layoutX="42.0" layoutY="430.0" mnemonicParsing="false" text="上传数据" />
             <Label fx:id="loginText" layoutX="373.0" layoutY="89.0" text="未登录" />
             <TextField layoutX="88.0" layoutY="46.0" />
             <TextField layoutX="373.0" layoutY="46.0" />
             <Label layoutX="42.0" layoutY="50.0" text="AppID:" />
             <Label layoutX="289.0" layoutY="50.0" text="SecrectKey:" />
             <Label layoutX="289.0" layoutY="89.0" text="登录状态：" />
-            <ListView layoutX="42.0" layoutY="135.0" prefHeight="273.0" prefWidth="494.0" />
          </children>
       </Pane>
    </children>
