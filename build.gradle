@@ -45,10 +45,6 @@ dependencies {
     compile 'mysql:mysql-connector-java'
     compile 'org.springframework.data:spring-data-jpa'
     compile 'org.hibernate:hibernate-entitymanager'
-    // https://mvnrepository.com/artifact/org.apache.poi/poi
-    compile group: 'org.apache.poi', name: 'poi', version: '3.15'
-    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
-    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
 }
 
 
